@@ -26,7 +26,10 @@
         <img style="width: 100px" src="./images/check.png" alt="check" srcset="">
         <img style="width: 100px" src="./images/x.png" alt="x" srcset="">
     </div>
+    <br />
+    <ol id="usersList">
 
+    </ol>
     <script src="/assets/bootstrap.min.js"></script>
 
     <script>
@@ -42,12 +45,6 @@
         }
     </script>
     <!-- &&&&&&&&&&&&&&&& -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -62,8 +59,55 @@
             measurementId: "G-PKKFBCVR87"
         };
         // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+        // firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+
+        // Get a reference to the database service
+        var database = firebase.database();
+
+        var ref = database.ref('users');
+
+        function gotData(data) {
+            // 拿firebase database 裡 user欄位資料
+            console.log('data.val() :' ,data.val());
+            var users = data.val();
+            // 拿users keys 值
+            var keys = Object.keys(users);
+            console.log('keys', keys);
+            var ul = document.getElementById('usersList');
+            for (var i = 0; i < keys.length; i++) {
+                var k = keys[i];
+                var name = users[k].name;
+                var email = users[k].email;
+                console.log('name , email : ', name, email);
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(name + ' : ' + email));
+                 li.setAttribute("id", "element4"); // added line
+                 ul.appendChild(li);
+            }
+        }
+
+        function errData(err) {
+            console.log('Error!');
+            console.log(err);
+        }
+
+        ref.on('value', gotData, errData);
+
+        var userId = firebase.auth().currentUser.uid;
+        // return firebase.database().ref('users').on('value', gotData, errData).then(function(snapshot){
+        //     console.log(snapshot);
+        // });
+        // console.log(firebase.database().ref(''))
+        // return firebase.database().ref('users' + userId).once('value').then(function (snapshot) {
+        //     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+        //     // ...
+        // });
+        // return firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
+        //     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+        //     // ...
+        // });
+        console.log('firebase:', firebase)
     </script>
 </body>
 

@@ -17,6 +17,9 @@ https://firebase.google.com/?hl=zh-tw
 * firebase serve
 * firebase deploy
 
+Get firebase data
+https://www.youtube.com/watch?v=NcewaPfFR6Y
+https://firebase.google.com/docs/database/web/read-and-write
 <!-- 目前deploy 路徑是 public -->
 
 
