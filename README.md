@@ -4,11 +4,16 @@
 ServiceWorker registration successful with scope:  http://127.0.0.1:5500/
 測試 NetWork 是否有抓到 js css檔案
 
-2. Add Firebase to your JavaScript project
+2. 使用 firebase ==> Add Firebase to your JavaScript project (過程在連結裡)
 https://firebase.google.com/docs/web/setup
 
-先登入 Firebase 選擇專案
+先登入 Firebase 創建/選擇專案
 https://firebase.google.com/?hl=zh-tw
+加入firebase 設定(index.html , ...)
+* firebase login 
+* firebase init
+* firebase deploy
+
 
 Workbox Cli 代碼在連結裡
 https://developers.google.com/web/tools/workbox/guides/precache-files/cli
