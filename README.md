@@ -1,5 +1,7 @@
 # Firebase-Web-Notification-
 
+DEMO : https://web-notification-61213.web.app/
+
 1. run liveServer 
 ServiceWorker registration successful with scope:  http://127.0.0.1:5500/
 測試 NetWork 是否有抓到 js css檔案
@@ -12,7 +14,10 @@ https://firebase.google.com/?hl=zh-tw
 加入firebase 設定(index.html , ...)
 * firebase login 
 * firebase init
+* firebase serve
 * firebase deploy
+
+<!-- 目前deploy 路徑是 public -->
 
 
 Workbox Cli 代碼在連結裡
@@ -30,7 +35,12 @@ settourmkt@MacBook-Pro-3 Firebase-Web-Notification- (master) $ workbox wizard --
 To build your service worker, run
 
 ```
-原本 的 precacheAndRoute(self.__WB_MANIFEST)
+
+原本 的 
+```
+precacheAndRoute(self.__WB_MANIFEST)
+```
+
 被替換成
 ```
 precacheAndRoute([
