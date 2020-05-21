@@ -8,18 +8,18 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 
 // 使用precache功能，在offline下也可以執行
 // 要存進cache storage裡的檔案清單
-var cacheFiles = [
-  "assets/bootstrap.min.css",
-  "assets/bootstrap.min.js",
-  "assets/jquery-3.5.1.min.js",
-  "images/check.png",
-  "images/x.png",
-  {
-    url: './index.html',
-    revision: '00000001' // 加revision，版本改了以後，sw.js 在 application 上會更新
-  }
-];
-workbox.precaching.precacheAndRoute(cacheFiles);
+// var cacheFiles = [
+//   "assets/bootstrap.min.css",
+//   "assets/bootstrap.min.js",
+//   "assets/jquery-3.5.1.min.js",
+//   "images/check.png",
+//   "images/x.png",
+//   {
+//     url: './index.html',
+//     revision: '00000001' // 加revision，版本改了以後，sw.js 在 application 上會更新
+//   }
+// ];
+// workbox.precaching.precacheAndRoute(cacheFiles);
 
 
 // 引用workbox build
