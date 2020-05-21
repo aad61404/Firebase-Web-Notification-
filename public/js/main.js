@@ -89,14 +89,16 @@
     FIREBASE_MESSAGING.requestPermission()
     .then(() => handleTokenRefresh())
     .then(() => checkSubscription())
+    .then(() => { 
+      return FIREBASE_MESSAGING.getToken()
+    }).then((token) => {
+      console.log('token:', token)
+    })
     .catch((err) => {
       console.log("error getting permission :(");
     });
-    console.log('hi')
-    FIREBASE_MESSAGING.getToken()
-      .then((token) => {
-        console.log('token:', token)
-      });
+
+
   }
 
   function checkSubscription() {

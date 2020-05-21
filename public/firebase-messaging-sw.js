@@ -1,6 +1,12 @@
 importScripts('https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/7.14.4/firebase-messaging.js');
 importScripts('/__/firebase/init.js');
+
+firebase.initializeApp({
+    messagingSenderId: "726401871837"
+})
+
+const initMessaging = firebase.message();
 // var firebaseConfig = {
 //     apiKey: "AIzaSyDYDCcag_fnrz6u1fhOlDUmnyiPgHrJrJs",
 //     authDomain: "web-notification-61213.firebaseapp.com",
