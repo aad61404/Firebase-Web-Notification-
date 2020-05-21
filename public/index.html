@@ -1,88 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>Simply Notify</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- <link rel="SHORTCUT ICON" href="images/faviconntu.ico" /> -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-messaging.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script> -->
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDYDCcag_fnrz6u1fhOlDUmnyiPgHrJrJs",
-            authDomain: "web-notification-61213.firebaseapp.com",
-            databaseURL: "https://web-notification-61213.firebaseio.com",
-            projectId: "web-notification-61213",
-            storageBucket: "web-notification-61213.appspot.com",
-            messagingSenderId: "726401871837",
-            appId: "1:726401871837:web:00ecf8243f64ecd205d034",
-            measurementId: "G-PKKFBCVR87"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        // firebase.analytics();
-
-        const messaging = firebase.messaging();
-        messaging.usePublicVapidKey("BPPNEWamSL4yvTZt07V7I_3BAK8qnDgAWdoj5r_7ukRi9reBBtSajGJdbMqqnk9MWKD52Z7RBvQYOgHP9f2IbEA");
-        console.log('messaging:', messaging)
-
-        messaging.requestPermission()
-            .then(function () {
-                console.log('Have Permission')
-                return messaging.getToken();
-            })
-            .then(function (token) {
-                console.log('------------get Token--------------')
-                console.log(token);
-            })
-            .catch(function (err) {
-                console.log(err);
-            })
-    </script>
-    <script src="/assets/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="/assets/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div>
-        <img style="width: 100px" src="./images/check.png" alt="check" srcset="">
-        <img style="width: 100px" src="./images/x.png" alt="x" srcset="">
+    <div class="wrapper">
+        <main>
+            <header>
+                <h1>Simply Notify</h1>
+                <p><em>A simple application to send notifications to everyone subscribed. It's simple. It's useless.
+                        It's simply notify.</em></p>
+            </header>
+
+            <button id="sign-in">Sign In</button>
+            <button id="sign-out" hidden>Sign Out</button>
+
+            <button id="subscribe" hidden>
+                Subscribe
+                <img src="/img/bell.png" alt="Notifications">
+            </button>
+            <button id="unsubscribe" hidden>
+                Unsubscribe
+                <img src="/img/bell.png" alt="Notifications">
+            </button>
+
+            <form id="send-notification-form" hidden>
+                <label class="sr-only" for="notification-message">Notification Message</label>
+                <div>
+                    <textarea id="notification-message" maxlength="40"
+                        placeholder="What would you like to say?"></textarea>
+                    <button type="submit" id="send-notification" aria-label="Send">
+                        <img src="/img/send.png" alt="">
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <small><a href="https://github.com/ireade/simply-notify">View Source</a></small>
+        </footer>
     </div>
-    <br />
-    <ol id="usersList">
 
-    </ol>
-    <script src="/assets/bootstrap.min.js"></script>
+    <!-- Firebase SDK -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
-    <script>
-        // 注册 service worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js', { scope: '/' }).then(function (registration) {
-                // 注册成功
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }).catch(function (err) {
-                // 注册失败 :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        }
-    </script>
-    <!-- &&&&&&&&&&&&&&&& -->
+    <script src="/__/firebase/7.14.4/firebase-app.js"></script>
+    <script src="/__/firebase/7.14.4/firebase-auth.js"></script>
+    <script src="/__/firebase/7.14.4/firebase-database.js"></script>
+    <script src="/__/firebase/7.14.4/firebase-messaging.js"></script>
 
-    <script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
 
-    </script>
+    <script src="/js/main.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+
 </body>
 
 </html>
