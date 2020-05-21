@@ -138,8 +138,8 @@
   function sendNotification(e) {
     e.preventDefault();
 
-    const notificationMessage = document.getElementById('notification-message')
-      .value;
+    const notificationMessage = document.getElementById('notification-message').value;
+
     if (!notificationMessage) return;
 
     FIREBASE_DATABASE.ref('/notifications')
