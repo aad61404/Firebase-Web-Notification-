@@ -1,6 +1,21 @@
 # Firebase-Web-Notification-
 
 DEMO : https://web-notification-61213.web.app/
+
+Firebase 連結
+https://console.firebase.google.com/project/web-notification-61213/overview?hl=zh-tw
+
+[Subscribing to Notifications | Web Push Notifications with Firebase (3/6) - YouTube](https://www.youtube.com/watch?v=a50fz6oiLCQ&list=PLGVwFLT24VFq3ZTcakcpByFhe1ex1BPuN&index=3)
+[GitHub - ireade/simply-notify at start](https://github.com/ireade/simply-notify/tree/start)
+
+firebase login
+
+firebase init
+
+firebase deploy
+
+firebase deploy — only hosting
+firebase deploy — only functions
 
 1. run liveServer 
 ServiceWorker registration successful with scope:  http://127.0.0.1:5500/

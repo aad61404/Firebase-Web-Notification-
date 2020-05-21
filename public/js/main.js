@@ -37,7 +37,6 @@
   function handleAuthStateChanged(user) {
     if (user) {
       // User is signed in
-      console.log(user);
       signInButton.setAttribute('hidden', 'true');
       signOutButton.removeAttribute('hidden');
       sendNotificationForm.removeAttribute('hidden');
@@ -93,6 +92,11 @@
     .catch((err) => {
       console.log("error getting permission :(");
     });
+    console.log('hi')
+    FIREBASE_MESSAGING.getToken()
+      .then((token) => {
+        console.log('token:', token)
+      });
   }
 
   function checkSubscription() {
