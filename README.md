@@ -39,6 +39,10 @@ To build your service worker, run
 
 ```
 
+---------------------------
+
+＃Workbox Cli use  cache 節省載入時間
+
 原本 的 
 ```
 precacheAndRoute(self.__WB_MANIFEST)
