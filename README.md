@@ -5,23 +5,14 @@
 
 * Firebase 連結 https://console.firebase.google.com/project/web-notification-61213/overview?hl=zh-tw
 
-[Subscribing to Notifications | Web Push Notifications with Firebase (3/6) - YouTube](https://www.youtube.com/watch?v=a50fz6oiLCQ&list=PLGVwFLT24VFq3ZTcakcpByFhe1ex1BPuN&index=3)
+* [Subscribing to Notifications | Web Push Notifications with Firebase (3/6) - YouTube](https://www.youtube.com/watch?v=a50fz6oiLCQ&list=PLGVwFLT24VFq3ZTcakcpByFhe1ex1BPuN&index=3)
 
-[GitHub - ireade/simply-notify at start](https://github.com/ireade/simply-notify/tree/start)
+* [GitHub - ireade/simply-notify at start](https://github.com/ireade/simply-notify/tree/start)
 
-firebase使用指令
-```
-firebase login
-firebase init
-firebase deploy
-firebase serve
-firebase deploy — only hosting
-firebase deploy — only functions
-```
 
 1. run liveServer 
 ServiceWorker registration successful with scope:  http://127.0.0.1:5500/
-測試 NetWork 是否有抓到 js css檔案
+<br />測試 NetWork 是否有抓到 js css檔案
 
 2. 使用 firebase ==> Add Firebase to your JavaScript project (過程在連結裡)
 https://firebase.google.com/docs/web/setup
@@ -29,18 +20,18 @@ https://firebase.google.com/docs/web/setup
 先登入 Firebase 創建/選擇專案
 https://firebase.google.com/?hl=zh-tw
 加入firebase 設定(index.html , ...)
-* firebase login 
-* firebase init
-
-* firebase deploy
-
-Get firebase data
-https://www.youtube.com/watch?v=NcewaPfFR6Y
-https://firebase.google.com/docs/database/web/read-and-write
+```
+firebase login
+firebase init
+firebase serve
+firebase deploy
+firebase deploy — only hosting
+firebase deploy — only functions
+```
 <!-- 目前deploy 路徑是 public -->
 
 
-Workbox Cli 代碼在連結裡
+Workbox Cli 代碼在連結
 https://developers.google.com/web/tools/workbox/guides/precache-files/cli
 
 輸出結果
@@ -55,7 +46,6 @@ settourmkt@MacBook-Pro-3 Firebase-Web-Notification- (master) $ workbox wizard --
 To build your service worker, run
 
 ```
-
 ---------------------------
 
 ＃Workbox Cli use  cache 節省載入時間
@@ -101,5 +91,8 @@ precacheAndRoute([
 
 
 其他參考資料
-https://letswrite.tw/pwa-web-push/
+Get firebase data
+* https://www.youtube.com/watch?v=NcewaPfFR6Y
+* https://firebase.google.com/docs/database/web/read-and-write
+* https://letswrite.tw/pwa-web-push/
 ｀
