@@ -91,11 +91,11 @@ precacheAndRoute([
 ## 重整後 原本的檔案 存進快取
 ## Load 時間減少一半以上
 
-![Application01](/images/Application01.png)
+![Application01](public/images/Application01.png)
 
-![NetWork01](/images/NetWork01.png)
+![NetWork01](public/images/NetWork01.png)
 
-![NetWork02](/images/NetWork02.png)
+![NetWork02](public/images/NetWork02.png)
 
 
 其他參考資料
