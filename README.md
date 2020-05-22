@@ -31,6 +31,16 @@ firebase deploy — only functions
 <!-- 目前deploy 路徑是 public -->
 
 
+其他參考資料
+Get firebase data
+* https://www.youtube.com/watch?v=NcewaPfFR6Y
+* https://firebase.google.com/docs/database/web/read-and-write
+* https://letswrite.tw/pwa-web-push/
+｀
+
+
+---------   其他筆記 ------------------
+
 Workbox Cli 代碼在連結
 https://developers.google.com/web/tools/workbox/guides/precache-files/cli
 
@@ -90,9 +100,3 @@ precacheAndRoute([
 ![NetWork02](public/images/NetWork02.png)
 
 
-其他參考資料
-Get firebase data
-* https://www.youtube.com/watch?v=NcewaPfFR6Y
-* https://firebase.google.com/docs/database/web/read-and-write
-* https://letswrite.tw/pwa-web-push/
-｀
