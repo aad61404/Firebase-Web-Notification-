@@ -2,17 +2,39 @@
 
 * DEMO : https://web-notification-61213.web.app/
 
+youtube 教學影片
+* [Subscribing to Notifications | Web Push Notifications with Firebase (3/6) - YouTube](https://www.youtube.com/watch?v=a50fz6oiLCQ&list=PLGVwFLT24VFq3ZTcakcpByFhe1ex1BPuN&index=3)
+
+影片github
+* [GitHub - ireade/simply-notify at start](https://github.com/ireade/simply-notify/tree/start)
 
 * Firebase 連結 https://console.firebase.google.com/project/web-notification-61213/overview?hl=zh-tw
 
-* [Subscribing to Notifications | Web Push Notifications with Firebase (3/6) - YouTube](https://www.youtube.com/watch?v=a50fz6oiLCQ&list=PLGVwFLT24VFq3ZTcakcpByFhe1ex1BPuN&index=3)
-
-* [GitHub - ireade/simply-notify at start](https://github.com/ireade/simply-notify/tree/start)
-
-
-1. run liveServer 
-ServiceWorker registration successful with scope:  http://127.0.0.1:5500/
+使用 ：
+1. live server  ||  firebase serve
+http://127.0.0.1:5500/
 <br />測試 NetWork 是否有抓到 js css檔案
+
+
+
+
+其他參考資料
+Get firebase data
+* https://www.youtube.com/watch?v=NcewaPfFR6Y
+* https://firebase.google.com/docs/database/web/read-and-write
+* https://letswrite.tw/pwa-web-push/
+｀
+
+<br />
+<br />
+<br />
+<br />
+
+-------------------------------------
+---------   其他筆記 ------------------
+-------------------------------------
+<br /><br />
+
 
 2. 使用 firebase ==> Add Firebase to your JavaScript project (過程在連結裡)
 https://firebase.google.com/docs/web/setup
@@ -30,16 +52,6 @@ firebase deploy — only functions
 ```
 <!-- 目前deploy 路徑是 public -->
 
-
-其他參考資料
-Get firebase data
-* https://www.youtube.com/watch?v=NcewaPfFR6Y
-* https://firebase.google.com/docs/database/web/read-and-write
-* https://letswrite.tw/pwa-web-push/
-｀
-
-
----------   其他筆記 ------------------
 
 Workbox Cli 代碼在連結
 https://developers.google.com/web/tools/workbox/guides/precache-files/cli
